@@ -7,7 +7,9 @@ const allWords = await Astro.fetchContent('./*.md')
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>新话语词典</title>
-		<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+		<style global>
+			@import "../styles/global.css";
+		</style>
 	</head>
 
 	<body class="bg-red-32 text-yellow-32 font-serif font-bold text-center">
