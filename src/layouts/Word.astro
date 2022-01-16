@@ -1,0 +1,20 @@
+---
+const { content } = Astro.props
+---
+
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{content.title}</title>
+		<link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
+	</head>
+
+    <body class="bg-red-32 text-yellow-32">
+        <a class="no-underline text-3xl" href="/">⬆</a>
+        <h1 class="font-serif font-bold text-center text-6xl  pt-32">{content.title}</h1>
+        <main class="font-serif font-bold text-3xl text-yellow-32 pt-32">
+            <slot />
+        </main>
+    </body>
+</html>

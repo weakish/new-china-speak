@@ -1,19 +1,19 @@
 ---
-// Component imports and setup JavaScript go here!
+const allWords = await Astro.fetchContent('./*.md')
 ---
 
-<html lang="en">
+<html lang="zh-cmn-Hans">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Welcome to Astro</title>
-		<style>
-			/* scoped CSS styles go here: */
-			/* h1 { ... } */
-		</style>
+		<title>新话语词典</title>
+		<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
 	</head>
 
-	<body>
-		<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+	<body class="bg-red-32 text-yellow-32 font-serif font-bold text-center">
+		<h1 class="text-9xl p-32">新话语词典</h1>
+		<main class="text-6xl">
+			{allWords.map((word) => <a class="p-6 leading-[6rem] whitespace-nowrap no-underline hover:underline" href={word.url}>{word.title}</a>)}
+		</main>
 	</body>
 </html>

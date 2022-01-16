@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main p {
+    margin: 3rem;
+    line-height: 3rem;
+}
+
+main a {
+    text-decoration: underline;
+}
+/* Inspired by Netlify. */
+main a:hover {
+    text-decoration: none;
+}
+
+main strong {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
