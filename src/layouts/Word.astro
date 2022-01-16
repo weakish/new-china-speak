@@ -12,10 +12,10 @@ const { content } = Astro.props
 		</style>
 	</head>
 
-    <body class="bg-red-32 text-yellow-32">
-        <a class="no-underline text-3xl" href="/">⬆</a>
-        <h1 class="font-serif font-bold text-center text-6xl  pt-32">{content.title}</h1>
-        <main class="font-serif font-bold text-3xl text-yellow-32 pt-32">
+    <body class="bg-red-32 text-yellow-32 font-bold">
+        <a class="no-underline text-3xl" href="/" hreflang="zh-cmn-Hans">⬆</a>
+        <h1 class="font-serif text-center text-6xl  pt-32">{content.title}</h1>
+        <main class="font-serif text-3xl text-yellow-32 pt-32">
             <slot />
         </main>
     </body>
